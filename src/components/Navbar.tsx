@@ -1,0 +1,61 @@
+import { Button } from "@/components/ui/button";
+import { Search, User, Bell } from "lucide-react";
+
+const Navbar = () => {
+  const navItems = [
+    { name: "Home", href: "#", active: true },
+    { name: "Mock Tests", href: "#" },
+    { name: "Analysis", href: "#" },
+    { name: "Dashboard", href: "#" },
+    { name: "Profile", href: "#" },
+  ];
+
+  return (
+    <nav className="bg-card border-b border-border sticky top-0 z-50 backdrop-blur-sm bg-card/80">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              CompetetivePoint
+            </h1>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    item.active
+                      ? "text-primary bg-primary/10"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                  }`}
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Right side */}
+          <div className="flex items-center space-x-4">
+            <Button variant="ghost" size="icon" className="relative">
+              <Bell className="h-5 w-5" />
+              <span className="absolute -top-1 -right-1 h-3 w-3 bg-error rounded-full text-xs flex items-center justify-center text-error-foreground">
+                2
+              </span>
+            </Button>
+            <Button variant="ghost" size="icon">
+              <User className="h-5 w-5" />
+            </Button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
