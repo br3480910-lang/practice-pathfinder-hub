@@ -77,7 +77,11 @@ const TestCard = ({
   };
 
   return (
-    <Card className="card-hover">
+    <Card className={`card-hover border-l-4 ${
+      status === "active" ? "border-l-primary" :
+      status === "completed" ? "border-l-success" :
+      status === "upcoming" ? "border-l-warning" : "border-l-muted"
+    }`}>
       <CardHeader className="pb-3">
         <div className="flex justify-between items-start">
           <div>
@@ -91,20 +95,20 @@ const TestCard = ({
       <CardContent className="space-y-4">
         {/* Test Info */}
         <div className="grid grid-cols-2 gap-4 text-sm">
-          <div className="flex items-center text-muted-foreground">
+          <div className="flex items-center text-muted-foreground bg-muted/50 rounded-lg p-3">
             <Clock className="h-4 w-4 mr-2" />
-            {duration}
+            <span className="font-medium">{duration}</span>
           </div>
-          <div className="flex items-center text-muted-foreground">
+          <div className="flex items-center text-muted-foreground bg-muted/50 rounded-lg p-3">
             <BookOpen className="h-4 w-4 mr-2" />
-            {questions} Questions
+            <span className="font-medium">{questions} Questions</span>
           </div>
         </div>
         
         {/* Attempts */}
-        <div className="flex items-center justify-between text-sm">
-          <span className="text-muted-foreground">Attempts:</span>
-          <span className="font-medium">{attempts}/{maxAttempts}</span>
+        <div className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
+          <span className="text-sm text-muted-foreground">Attempts:</span>
+          <span className="font-semibold">{attempts}/{maxAttempts}</span>
         </div>
         
         {/* Progress Bar for Active Tests */}
@@ -125,9 +129,17 @@ const TestCard = ({
         
         {/* Score for Completed Tests */}
         {status === "completed" && score !== undefined && (
-          <div className="flex items-center justify-between p-3 bg-success/10 rounded-lg">
+          <div className="flex items-center justify-between p-3 bg-success/10 rounded-lg border border-success/20">
             <span className="text-sm font-medium">Your Score:</span>
             <span className="text-lg font-bold text-success">{score}%</span>
+          </div>
+        )}
+        
+        {/* Deadline for Upcoming Tests */}
+        {status === "upcoming" && deadline && (
+          <div className="flex items-center justify-between p-3 bg-warning/10 rounded-lg border border-warning/20">
+            <span className="text-sm font-medium">Available on:</span>
+            <span className="text-sm font-semibold text-warning-foreground">{deadline}</span>
           </div>
         )}
       </CardContent>

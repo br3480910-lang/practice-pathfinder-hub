@@ -1,14 +1,11 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Search, Filter, Plus } from "lucide-react";
 import TestCard from "./TestCard";
+import TestFilters from "./TestFilters";
+import StatsCards from "./StatsCards";
 
 const TestGrid = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [filterSubject, setFilterSubject] = useState("all");
-  const [filterStatus, setFilterStatus] = useState("all");
+  const [activeFilter, setActiveFilter] = useState("all");
+  const [searchQuery, setSearchQuery] = useState("");
 
   // Mock data for tests
   const tests = [
@@ -89,69 +86,29 @@ const TestGrid = () => {
   const statuses = ["all", "active", "completed", "upcoming"];
 
   const filteredTests = tests.filter(test => {
-    const matchesSearch = test.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         test.subject.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesSubject = filterSubject === "all" || test.subject === filterSubject;
-    const matchesStatus = filterStatus === "all" || test.status === filterStatus;
-    
-    return matchesSearch && matchesSubject && matchesStatus;
+    const matchesFilter = activeFilter === "all" || test.status === activeFilter;
+    const matchesSearch = test.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         test.subject.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesFilter && matchesSearch;
   });
 
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
-          <div>
-            <h2 className="text-3xl font-bold mb-2">Your Mock Tests</h2>
-            <p className="text-muted-foreground">Track your progress and master your subjects</p>
-          </div>
-          <Button className="mt-4 md:mt-0">
-            <Plus className="h-4 w-4 mr-2" />
-            Add New Test
-          </Button>
+      <div className="max-w-7xl mx-auto space-y-8">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-2">My Mock Tests</h2>
+          <p className="text-muted-foreground">Track your progress and manage your mock test preparation journey.</p>
         </div>
-
-        {/* Filters */}
-        <div className="mb-8 space-y-4">
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="flex-1 relative">
-              <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-              <Input
-                placeholder="Search tests or subjects..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10"
-              />
-            </div>
-            <Select value={filterSubject} onValueChange={setFilterSubject}>
-              <SelectTrigger className="md:w-48">
-                <SelectValue placeholder="Filter by subject" />
-              </SelectTrigger>
-              <SelectContent>
-                {subjects.map(subject => (
-                  <SelectItem key={subject} value={subject}>
-                    {subject === "all" ? "All Subjects" : subject}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-            <Select value={filterStatus} onValueChange={setFilterStatus}>
-              <SelectTrigger className="md:w-48">
-                <SelectValue placeholder="Filter by status" />
-              </SelectTrigger>
-              <SelectContent>
-                {statuses.map(status => (
-                  <SelectItem key={status} value={status}>
-                    {status === "all" ? "All Status" : status.charAt(0).toUpperCase() + status.slice(1)}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-        </div>
-
-        {/* Test Grid */}
+        
+        <StatsCards />
+        
+        <TestFilters
+          activeFilter={activeFilter}
+          onFilterChange={setActiveFilter}
+          searchQuery={searchQuery}
+          onSearchChange={setSearchQuery}
+        />
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredTests.map((test) => (
             <TestCard
@@ -172,8 +129,7 @@ const TestGrid = () => {
 
         {filteredTests.length === 0 && (
           <div className="text-center py-12">
-            <div className="text-muted-foreground text-lg mb-4">No tests found</div>
-            <p className="text-muted-foreground">Try adjusting your search or filters</p>
+            <p className="text-muted-foreground text-lg">No tests found matching your criteria.</p>
           </div>
         )}
       </div>
