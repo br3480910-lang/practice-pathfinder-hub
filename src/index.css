@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -23,13 +23,13 @@
     --primary: 263 52% 50%;
     --primary-foreground: 0 0% 100%;
 
-    /* Success Green - #17C964 */
-    --success: 146 85% 57%;
+    /* Success Green - #0F7B0F (Dark Green for completed) */
+    --success: 120 85% 27%;
     --success-foreground: 0 0% 100%;
 
-    /* Warning Yellow - #FFC107 */
-    --warning: 45 100% 51%;
-    --warning-foreground: 210 11% 15%;
+    /* Warning Red - #DC2626 (Red for upcoming) */
+    --warning: 0 74% 51%;
+    --warning-foreground: 0 0% 100%;
 
     /* Error Red - #DC3545 */
     --error: 354 70% 54%;
@@ -127,7 +127,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
   }
 }
 

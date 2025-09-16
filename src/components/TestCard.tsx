@@ -33,9 +33,9 @@ const TestCard = ({
       case "active":
         return <Badge className="status-active">Active</Badge>;
       case "completed":
-        return <Badge className="status-completed">Completed</Badge>;
+        return <Badge className="bg-success text-success-foreground">Completed</Badge>;
       case "upcoming":
-        return <Badge className="status-upcoming">Upcoming</Badge>;
+        return <Badge className="bg-warning text-warning-foreground">Upcoming</Badge>;
     }
   };
 

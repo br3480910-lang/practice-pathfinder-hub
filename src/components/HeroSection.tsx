@@ -20,7 +20,7 @@ const HeroSection = () => {
       
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-poppins">
             Never Miss Practice
             <span className="block text-teal">Again!</span>
           </h1>

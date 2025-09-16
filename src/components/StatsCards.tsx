@@ -37,7 +37,7 @@ const StatsCards = () => {
         title="Expiring Soon"
         value="3"
         icon={<Clock className="h-8 w-8" />}
-        borderColor="border-l-warning"
+        borderColor="border-l-error"
       />
       <StatCard
         title="Completed"
