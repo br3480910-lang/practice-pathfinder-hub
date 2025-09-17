@@ -31,11 +31,11 @@ const TestCard = ({
   const getStatusBadge = () => {
     switch (status) {
       case "active":
-        return <Badge className="status-active">Active</Badge>;
+        return <Badge className="bg-electric text-white shadow-lg animate-pulse">✨ Active</Badge>;
       case "completed":
-        return <Badge className="bg-success text-success-foreground">Completed</Badge>;
+        return <Badge className="bg-success text-success-foreground shadow-lg">✅ Completed</Badge>;
       case "upcoming":
-        return <Badge className="bg-warning text-warning-foreground">Upcoming</Badge>;
+        return <Badge className="bg-warning text-warning-foreground shadow-lg">🔥 Upcoming</Badge>;
     }
   };
 

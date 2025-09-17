@@ -96,8 +96,11 @@ const TestGrid = () => {
     <section className="py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-2">My Mock Tests</h2>
-          <p className="text-muted-foreground">Track your progress and manage your mock test preparation journey.</p>
+          <h2 className="text-3xl font-bold mb-2 bg-gradient-primary bg-clip-text text-transparent">My Mock Tests</h2>
+          <p className="text-muted-foreground mb-4">Track your progress and manage your mock test preparation journey.</p>
+          <div className="inline-flex items-center gap-2 bg-electric/10 text-electric px-4 py-2 rounded-full font-medium">
+            🎯 Practice makes perfect - Every test brings you closer to your goal!
+          </div>
         </div>
         
         <StatsCards />

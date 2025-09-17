@@ -22,12 +22,16 @@ const HeroSection = () => {
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-poppins">
             Never Miss Practice
-            <span className="block text-teal">Again!</span>
+            <span className="block text-gold animate-pulse">Again!</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-3xl mx-auto">
             Master SSC, Banking, Railways, and State exams with our comprehensive mock test platform. 
             Track your progress, analyze your performance, and achieve your goals.
           </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-8 max-w-2xl mx-auto border border-white/20">
+            <p className="text-lg text-electric font-semibold mb-2">🚀 Boost Your Success Rate!</p>
+            <p className="text-white/80">Students who practice with mock tests score 40% higher than those who don't. Start your journey to success today!</p>
+          </div>
           
           {/* Search Section */}
           <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8">

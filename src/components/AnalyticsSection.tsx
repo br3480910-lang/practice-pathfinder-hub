@@ -45,8 +45,11 @@ const AnalyticsSection = () => {
     <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Your Performance Analytics</h2>
-          <p className="text-muted-foreground text-lg">Track your progress and identify areas for improvement</p>
+          <h2 className="text-3xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">Your Performance Analytics</h2>
+          <p className="text-muted-foreground text-lg mb-4">Track your progress and identify areas for improvement</p>
+          <div className="inline-flex items-center gap-2 bg-gradient-motivation bg-clip-text text-transparent font-semibold text-lg">
+            ⚡ Data-driven practice increases success rate by 3x! ⚡
+          </div>
         </div>
 
         {/* Stats Grid */}

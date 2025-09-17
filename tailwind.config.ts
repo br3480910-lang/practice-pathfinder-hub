@@ -40,6 +40,8 @@ export default {
           foreground: "hsl(var(--error-foreground))",
         },
         teal: "hsl(var(--teal))",
+        electric: "hsl(var(--electric))",
+        gold: "hsl(var(--gold))",
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
