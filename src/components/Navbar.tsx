@@ -4,11 +4,11 @@ import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const navItems = [
-    { name: "Home", href: "#", active: true },
-    { name: "Mock Tests", href: "#" },
-    { name: "Analysis", href: "#" },
-    { name: "Dashboard", href: "#" },
-    { name: "Profile", href: "#" },
+    { name: "Home", href: "/", active: true },
+    { name: "Mock Tests", href: "/mock-tests" },
+    { name: "Analysis", href: "/analysis" },
+    { name: "Dashboard", href: "/dashboard" },
+    { name: "Profile", href: "/profile" },
   ];
 
   return (
