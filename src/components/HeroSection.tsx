@@ -15,10 +15,10 @@ const HeroSection = () => {
         />
       </div>
       
-      {/* Modern Circular Decorations */}
-      <div className="circle-decoration circle-decoration-lg" style={{ top: '-100px', right: '-50px', background: 'var(--gradient-accent)' }}></div>
-      <div className="circle-decoration circle-decoration-md" style={{ bottom: '20%', left: '-30px', background: 'var(--gradient-green)' }}></div>
-      <div className="circle-decoration circle-decoration-sm" style={{ top: '30%', left: '10%', background: 'var(--gradient-purple)' }}></div>
+      {/* Modern Circular Decorations - Purple theme only */}
+      <div className="circle-decoration circle-decoration-lg" style={{ top: '-100px', right: '-50px', background: 'var(--gradient-primary)' }}></div>
+      <div className="circle-decoration circle-decoration-md" style={{ bottom: '20%', left: '-30px', background: 'var(--gradient-purple)' }}></div>
+      <div className="circle-decoration circle-decoration-sm" style={{ top: '30%', left: '10%', background: 'var(--gradient-accent)' }}></div>
       
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-hero/90"></div>
@@ -27,7 +27,7 @@ const HeroSection = () => {
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-poppins">
             Never Miss Practice
-            <span className="block text-gold animate-pulse">Again!</span>
+            <span className="block text-electric animate-pulse">Again!</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-3xl mx-auto">
             Master SSC, Banking, Railways, and State exams with our comprehensive mock test platform. 
@@ -63,15 +63,15 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white relative z-10">
             <div className="text-center modern-card bg-white/10 border-white/20">
-              <div className="text-4xl font-bold mb-2 bg-gradient-accent bg-clip-text text-transparent">50,000+</div>
+              <div className="text-4xl font-bold mb-2 bg-gradient-primary bg-clip-text text-transparent">50,000+</div>
               <div className="text-white/90 font-medium">Active Students</div>
             </div>
             <div className="text-center modern-card bg-white/10 border-white/20">
-              <div className="text-4xl font-bold mb-2 bg-gradient-green bg-clip-text text-transparent">1,200+</div>
+              <div className="text-4xl font-bold mb-2 bg-gradient-purple bg-clip-text text-transparent">1,200+</div>
               <div className="text-white/90 font-medium">Mock Tests</div>
             </div>
             <div className="text-center modern-card bg-white/10 border-white/20">
-              <div className="text-4xl font-bold mb-2 bg-gradient-motivation bg-clip-text text-transparent">95%</div>
+              <div className="text-4xl font-bold mb-2 bg-gradient-accent bg-clip-text text-transparent">95%</div>
               <div className="text-white/90 font-medium">Success Rate</div>
             </div>
           </div>

@@ -23,34 +23,34 @@
     --primary: 268 54% 35%;
     --primary-foreground: 0 0% 100%;
 
-    /* Success Dark Green - Deep Forest #059669 */
-    --success: 160 84% 39%;
+    /* Success Dark Purple - Consistent with theme */
+    --success: 268 60% 45%;
     --success-foreground: 0 0% 100%;
 
-    /* Warning Orange - Vibrant Orange #F97316 */
-    --warning: 24 95% 53%;
-    --warning-foreground: 0 0% 100%;
+    /* Warning Purple - Lighter shade */
+    --warning: 268 80% 60%;
+    --warning-foreground: 268 54% 15%;
 
-    /* Error Red - Vibrant Red #EF4444 */
-    --error: 0 84% 60%;
+    /* Error Purple - Darker shade */
+    --error: 268 40% 30%;
     --error-foreground: 0 0% 100%;
 
-    /* Teal Dark Green - Emerald #10B981 */
-    --teal: 158 64% 52%;
+    /* Teal replaced with purple variant */
+    --teal: 268 70% 50%;
 
-    /* Electric Violet - Bright Purple #A855F7 */
-    --electric: 271 91% 65%;
+    /* Electric Purple - Bright Purple */
+    --electric: 268 90% 70%;
     
-    /* Golden Yellow for achievements */
-    --gold: 43 96% 56%;
+    /* Golden replaced with light purple */
+    --gold: 268 60% 80%;
     
-    /* Extended violet palette - Amazon Academy inspired */
+    /* Unified violet palette - all purple shades */
     --violet-light: 268 80% 85%;
     --violet-medium: 268 60% 55%;
     --violet-dark: 268 54% 35%;
-    --green-light: 142 76% 73%;
-    --green-medium: 142 69% 58%;
-    --green-dark: 142 76% 36%;
+    --green-light: 268 50% 70%;
+    --green-medium: 268 60% 50%;
+    --green-dark: 268 70% 30%;
     --purple-accent: 268 80% 70%;
     --lavender: 268 100% 95%;
     
@@ -70,15 +70,15 @@
     --input: 214 32% 91%;
     --ring: 263 52% 50%;
 
-    /* Amazon Academy Inspired Gradients - Deep Purple Theme */
+    /* Unified Purple Gradients - Single color theme */
     --gradient-primary: linear-gradient(135deg, hsl(268, 54%, 35%), hsl(268, 80%, 70%));
-    --gradient-hero: linear-gradient(135deg, hsl(268, 54%, 35%) 0%, hsl(142, 76%, 36%) 40%, hsl(268, 80%, 70%) 100%);
-    --gradient-success: linear-gradient(135deg, hsl(142, 76%, 36%), hsl(142, 69%, 58%));
-    --gradient-motivation: linear-gradient(135deg, hsl(43, 96%, 56%), hsl(268, 80%, 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(268, 54%, 35%) 0%, hsl(268, 70%, 50%) 50%, hsl(268, 80%, 70%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(268, 60%, 45%), hsl(268, 80%, 60%));
+    --gradient-motivation: linear-gradient(135deg, hsl(268, 60%, 80%), hsl(268, 80%, 70%));
     --gradient-purple: linear-gradient(135deg, hsl(268, 54%, 35%), hsl(268, 80%, 70%));
-    --gradient-green: linear-gradient(135deg, hsl(142, 76%, 36%), hsl(142, 76%, 73%));
+    --gradient-green: linear-gradient(135deg, hsl(268, 70%, 30%), hsl(268, 50%, 70%));
     --gradient-accent: linear-gradient(135deg, hsl(268, 80%, 70%), hsl(268, 100%, 95%));
-    --gradient-vibrant: linear-gradient(135deg, hsl(268, 54%, 35%), hsl(268, 80%, 70%), hsl(142, 76%, 36%));
+    --gradient-vibrant: linear-gradient(135deg, hsl(268, 54%, 35%), hsl(268, 80%, 70%), hsl(268, 90%, 85%));
     
     /* Shadows */
     --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -125,13 +125,13 @@
     --accent: 268 60% 25%;
     --accent-foreground: 268 20% 95%;
     
-    /* Extended dark palette - Amazon Academy inspired */
+    /* Extended dark palette - Unified purple theme */
     --violet-light: 268 80% 80%;
     --violet-medium: 268 80% 70%;
     --violet-dark: 268 54% 35%;
-    --green-light: 142 60% 60%;
-    --green-medium: 142 76% 36%;
-    --green-dark: 142 100% 25%;
+    --green-light: 268 40% 60%;
+    --green-medium: 268 60% 40%;
+    --green-dark: 268 80% 25%;
     --purple-accent: 268 80% 70%;
     --lavender: 268 40% 20%;
 
@@ -222,11 +222,11 @@
     @apply bg-gradient-primary h-full transition-all duration-500 ease-out;
   }
   
-  /* Modern circular design elements */
+  /* Modern circular design elements - Purple theme */
   .circle-decoration {
     position: absolute;
     border-radius: 50%;
-    background: var(--gradient-accent);
+    background: var(--gradient-primary);
     opacity: 0.1;
   }
   
@@ -282,7 +282,7 @@
     left: -150px;
     width: 300px;
     height: 300px;
-    background: var(--gradient-green);
+    background: var(--gradient-primary);
     border-radius: 50%;
     opacity: 0.1;
     z-index: 0;
