@@ -27,7 +27,7 @@ const HeroSection = () => {
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-poppins">
             Never Miss Practice
-            <span className="block text-electric animate-pulse">Again!</span>
+            <span className="block text-gold animate-pulse">Again!</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-3xl mx-auto">
             Master SSC, Banking, Railways, and State exams with our comprehensive mock test platform. 
@@ -49,11 +49,11 @@ const HeroSection = () => {
                 />
               </div>
               <div className="flex gap-2">
-                <Button variant="outline" size="lg" className="whitespace-nowrap bg-white/10 border-white/30 text-foreground hover:bg-white/20">
+                <Button className="btn-blue whitespace-nowrap">
                   <Filter className="h-4 w-4 mr-2" />
                   Filters
                 </Button>
-                <Button size="lg" className="bg-gradient-primary text-white hover:opacity-90 shadow-lg">
+                <Button className="btn-green shadow-lg">
                   Search Tests
                 </Button>
               </div>
@@ -63,15 +63,15 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white relative z-10">
             <div className="text-center modern-card bg-white/10 border-white/20">
-              <div className="text-4xl font-bold mb-2 bg-gradient-primary bg-clip-text text-transparent">50,000+</div>
+              <div className="text-4xl font-bold mb-2 text-electric">50,000+</div>
               <div className="text-white/90 font-medium">Active Students</div>
             </div>
             <div className="text-center modern-card bg-white/10 border-white/20">
-              <div className="text-4xl font-bold mb-2 bg-gradient-purple bg-clip-text text-transparent">1,200+</div>
+              <div className="text-4xl font-bold mb-2 text-teal">1,200+</div>
               <div className="text-white/90 font-medium">Mock Tests</div>
             </div>
             <div className="text-center modern-card bg-white/10 border-white/20">
-              <div className="text-4xl font-bold mb-2 bg-gradient-accent bg-clip-text text-transparent">95%</div>
+              <div className="text-4xl font-bold mb-2 text-gold">95%</div>
               <div className="text-white/90 font-medium">Success Rate</div>
             </div>
           </div>

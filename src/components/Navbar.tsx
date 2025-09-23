@@ -44,13 +44,13 @@ const Navbar = () => {
 
           {/* Right side */}
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="icon" className="relative">
+            <Button variant="ghost" size="icon" className="relative hover:bg-button-blue/10 hover:text-button-blue">
               <Bell className="h-5 w-5" />
-              <span className="absolute -top-1 -right-1 h-3 w-3 bg-error rounded-full text-xs flex items-center justify-center text-error-foreground">
+              <span className="absolute -top-1 -right-1 h-3 w-3 bg-button-orange rounded-full text-xs flex items-center justify-center text-white">
                 2
               </span>
             </Button>
-            <Button variant="ghost" size="icon">
+            <Button variant="ghost" size="icon" className="hover:bg-button-green/10 hover:text-button-green">
               <User className="h-5 w-5" />
             </Button>
           </div>

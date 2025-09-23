@@ -23,39 +23,46 @@
     --primary: 268 54% 35%;
     --primary-foreground: 0 0% 100%;
 
-    /* Success Dark Purple - Consistent with theme */
-    --success: 268 60% 45%;
+    /* Success Emerald Green - For success states */
+    --success: 158 64% 52%;
     --success-foreground: 0 0% 100%;
 
-    /* Warning Purple - Lighter shade */
-    --warning: 268 80% 60%;
-    --warning-foreground: 268 54% 15%;
+    /* Warning Orange - For warnings */
+    --warning: 32 95% 44%;
+    --warning-foreground: 0 0% 100%;
 
-    /* Error Purple - Darker shade */
-    --error: 268 40% 30%;
+    /* Error Red - For errors */
+    --error: 0 72% 51%;
     --error-foreground: 0 0% 100%;
 
-    /* Teal replaced with purple variant */
-    --teal: 268 70% 50%;
+    /* Teal Blue - For info states */
+    --teal: 172 66% 50%;
 
-    /* Electric Purple - Bright Purple */
-    --electric: 268 90% 70%;
+    /* Electric Blue - Bright accent */
+    --electric: 213 94% 68%;
     
-    /* Golden replaced with light purple */
-    --gold: 268 60% 80%;
+    /* Golden Yellow - For highlights */
+    --gold: 45 93% 58%;
     
-    /* Unified violet palette - all purple shades */
+    /* Text and button colors - vibrant contrasts */
+    --text-blue: 213 94% 68%;
+    --text-green: 158 64% 52%;
+    --text-orange: 32 95% 44%;
+    --button-blue: 213 94% 68%;
+    --button-green: 158 64% 52%;
+    --button-orange: 32 95% 44%;
+    /* Violet palette - for backgrounds only */
     --violet-light: 268 80% 85%;
     --violet-medium: 268 60% 55%;
     --violet-dark: 268 54% 35%;
-    --green-light: 268 50% 70%;
-    --green-medium: 268 60% 50%;
-    --green-dark: 268 70% 30%;
+    --green-light: 158 50% 70%;
+    --green-medium: 158 64% 52%;
+    --green-dark: 158 70% 30%;
     --purple-accent: 268 80% 70%;
     --lavender: 268 100% 95%;
     
-    --secondary: 268 80% 70%;
-    --secondary-foreground: 268 54% 15%;
+    --secondary: 213 94% 68%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 268 50% 95%;
     --muted-foreground: 268 15% 47%;
@@ -125,13 +132,19 @@
     --accent: 268 60% 25%;
     --accent-foreground: 268 20% 95%;
     
-    /* Extended dark palette - Unified purple theme */
+    /* Extended dark palette - colorful text and buttons */
+    --text-blue: 213 94% 78%;
+    --text-green: 158 64% 62%;
+    --text-orange: 32 95% 54%;
+    --button-blue: 213 94% 68%;
+    --button-green: 158 64% 52%;
+    --button-orange: 32 95% 44%;
     --violet-light: 268 80% 80%;
     --violet-medium: 268 80% 70%;
     --violet-dark: 268 54% 35%;
-    --green-light: 268 40% 60%;
-    --green-medium: 268 60% 40%;
-    --green-dark: 268 80% 25%;
+    --green-light: 158 40% 60%;
+    --green-medium: 158 60% 40%;
+    --green-dark: 158 80% 25%;
     --purple-accent: 268 80% 70%;
     --lavender: 268 40% 20%;
 
@@ -189,17 +202,30 @@
     background: var(--gradient-vibrant);
   }
   
-  /* Status badges */
+  /* Status badges with colorful variants */
   .status-active {
     @apply bg-success text-success-foreground;
   }
   
   .status-completed {
-    @apply bg-muted text-muted-foreground;
+    @apply bg-button-blue text-white;
   }
   
   .status-upcoming {
     @apply bg-warning text-warning-foreground;
+  }
+  
+  /* Button variants with different colors */
+  .btn-blue {
+    @apply bg-button-blue hover:bg-button-blue/90 text-white;
+  }
+  
+  .btn-green {
+    @apply bg-button-green hover:bg-button-green/90 text-white;
+  }
+  
+  .btn-orange {
+    @apply bg-button-orange hover:bg-button-orange/90 text-white;
   }
   
   /* Card hover effects */
