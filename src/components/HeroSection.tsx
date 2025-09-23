@@ -5,7 +5,7 @@ import heroImage from "@/assets/hero-image.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-hero py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative bg-gradient-hero py-20 px-4 sm:px-6 lg:px-8 overflow-hidden hero-section">
       {/* Background Image */}
       <div className="absolute inset-0 opacity-20">
         <img 
@@ -14,6 +14,11 @@ const HeroSection = () => {
           className="w-full h-full object-cover"
         />
       </div>
+      
+      {/* Modern Circular Decorations */}
+      <div className="circle-decoration circle-decoration-lg" style={{ top: '-100px', right: '-50px', background: 'var(--gradient-accent)' }}></div>
+      <div className="circle-decoration circle-decoration-md" style={{ bottom: '20%', left: '-30px', background: 'var(--gradient-green)' }}></div>
+      <div className="circle-decoration circle-decoration-sm" style={{ top: '30%', left: '10%', background: 'var(--gradient-purple)' }}></div>
       
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-hero/90"></div>
@@ -34,21 +39,21 @@ const HeroSection = () => {
           </div>
           
           {/* Search Section */}
-          <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8">
+          <div className="max-w-4xl mx-auto modern-card border-white/20 mb-8 relative z-10">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex-1 relative">
-                <Search className="absolute left-3 top-3 h-5 w-5 text-white/70" />
+                <Search className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
                 <Input 
                   placeholder="Search for mock tests, subjects, or exam types..."
-                  className="pl-10 bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30"
+                  className="pl-10 bg-background/50 border-border/50 focus:bg-background/80 transition-all"
                 />
               </div>
               <div className="flex gap-2">
-                <Button variant="secondary" size="lg" className="whitespace-nowrap">
+                <Button variant="outline" size="lg" className="whitespace-nowrap bg-white/10 border-white/30 text-foreground hover:bg-white/20">
                   <Filter className="h-4 w-4 mr-2" />
                   Filters
                 </Button>
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90">
+                <Button size="lg" className="bg-gradient-primary text-white hover:opacity-90 shadow-lg">
                   Search Tests
                 </Button>
               </div>
@@ -56,18 +61,18 @@ const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
-            <div className="text-center">
-              <div className="text-3xl font-bold mb-2">50,000+</div>
-              <div className="text-white/80">Active Students</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white relative z-10">
+            <div className="text-center modern-card bg-white/10 border-white/20">
+              <div className="text-4xl font-bold mb-2 bg-gradient-accent bg-clip-text text-transparent">50,000+</div>
+              <div className="text-white/90 font-medium">Active Students</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold mb-2">1,200+</div>
-              <div className="text-white/80">Mock Tests</div>
+            <div className="text-center modern-card bg-white/10 border-white/20">
+              <div className="text-4xl font-bold mb-2 bg-gradient-green bg-clip-text text-transparent">1,200+</div>
+              <div className="text-white/90 font-medium">Mock Tests</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold mb-2">95%</div>
-              <div className="text-white/80">Success Rate</div>
+            <div className="text-center modern-card bg-white/10 border-white/20">
+              <div className="text-4xl font-bold mb-2 bg-gradient-motivation bg-clip-text text-transparent">95%</div>
+              <div className="text-white/90 font-medium">Success Rate</div>
             </div>
           </div>
         </div>
